@@ -23,8 +23,8 @@ const bookSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ["available", "borrowed"], // here we could use a boolean but this allows for more flexibility if the project evolves :)
-    },
+        enum: ["available", "borrowed"]
+    }, 
     borrower: {
         type: Schema.Type.objectId, // Je crois qu'on doit encore réfléchir à celui-là
         ref: "users"

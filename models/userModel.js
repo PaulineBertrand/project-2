@@ -8,11 +8,12 @@ const userSchema = new Schema({
     },
     lastname: {
         type: String,
-        require: true // What if someone doesn't want to give their last name ? We could also have a username alternatively
+        require: true
     },
     email: {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     password: {
         type: String,
